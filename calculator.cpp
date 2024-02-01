@@ -1,132 +1,178 @@
 #include <iostream>
 #include "calculator.h"
 
-/// Constructor
-/// Initilize data members to 0 doubles
-Calculator::Calculator() : result(0.0), mem(0.0) {}
-
-void Calculator::add()
+Calculator :: Calculator (): result (0.0), mem (0.0)
 {
-    std::string a, b;
-    std::cout << "Enter the first number: ";
-    std::cin >> a;
-    std::cout << "Enter the second number: ";
-    std::cin >> b;
-    result = parseInput(a) + parseInput(b);
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Calculator::Calculator(): result (0.0), mem (0.0)@@@calculator.cpp>"));
+trace_log_ptr->push_back(std::string("</Calculator::Calculator(): result (0.0), mem (0.0)@@@calculator.cpp>"));
 }
-void Calculator::subtract()
+void Calculator :: add ()
 {
-    std::string a, b;
-    std::cout << "Enter the first number: ";
-    std::cin >> a;
-    std::cout << "Enter the second number: ";
-    std::cin >> b;
-    result = parseInput(a) - parseInput(b);
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Calculator::add()@@@calculator.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the first number: ";
+    std :: cin >> a;
+    std :: cout << "Enter the second number: ";
+    std :: cin >> b;
+    result = parseInput (a) + parseInput (b);
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::add()@@@calculator.cpp>"));
 }
-void Calculator::multiply()
+void Calculator :: subtract ()
 {
-    std::string a, b;
-    std::cout << "Enter the first number: ";
-    std::cin >> a;
-    std::cout << "Enter the second number: ";
-    std::cin >> b;
-    result = parseInput(a) * parseInput(b);
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Calculator::subtract()@@@calculator.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the first number: ";
+    std :: cin >> a;
+    std :: cout << "Enter the second number: ";
+    std :: cin >> b;
+    result = parseInput (a) - parseInput (b);
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::subtract()@@@calculator.cpp>"));
 }
-void Calculator::divide()
+void Calculator :: multiply ()
 {
-    std::string a, b;
-    std::cout << "Enter the first number: ";
-    std::cin >> a;
-    std::cout << "Enter the second number: ";
-    std::cin >> b;
-    result = parseInput(a) / parseInput(b);
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Calculator::multiply()@@@calculator.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the first number: ";
+    std :: cin >> a;
+    std :: cout << "Enter the second number: ";
+    std :: cin >> b;
+    result = parseInput (a) * parseInput (b);
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::multiply()@@@calculator.cpp>"));
 }
-void Calculator::square()
+void Calculator :: divide ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    double parsedA = parseInput(a);
+trace_log_ptr->push_back(std::string("<Calculator::divide()@@@calculator.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the first number: ";
+    std :: cin >> a;
+    std :: cout << "Enter the second number: ";
+    std :: cin >> b;
+    result = parseInput (a) / parseInput (b);
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::divide()@@@calculator.cpp>"));
+}
+void Calculator :: square ()
+{
+trace_log_ptr->push_back(std::string("<Calculator::square()@@@calculator.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    double parsedA = parseInput (a);
     result = parsedA * parsedA;
-    std::cout << "The result is " << result;
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::square()@@@calculator.cpp>"));
 }
-void Calculator::sqrt()
+void Calculator :: sqrt ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::sqrt(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Calculator::sqrt()@@@calculator.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: sqrt (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Calculator::sqrt()@@@calculator.cpp>"));
 }
-void Calculator::setMem()
+void Calculator :: setMem ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    mem = parseInput(a);
-    std::cout << "The mem is " << mem;
+trace_log_ptr->push_back(std::string("<Calculator::setMem()@@@calculator.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    mem = parseInput (a);
+    std :: cout << "The mem is " << mem;
+trace_log_ptr->push_back(std::string("</Calculator::setMem()@@@calculator.cpp>"));
 }
-void Calculator::printMem() const
+void Calculator :: printMem () const
 {
-    std::cout << "The mem is " << mem;
+trace_log_ptr->push_back(std::string("<Calculator::printMem() const@@@calculator.cpp>"));
+    std :: cout << "The mem is " << mem;
+trace_log_ptr->push_back(std::string("</Calculator::printMem() const@@@calculator.cpp>"));
 }
-/// subs in number value when strings result or mem are entered
-double Calculator::parseInput(const std::string& input) const
+double Calculator :: parseInput (const std :: string & input) const
 {
+trace_log_ptr->push_back(std::string("<Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
     if (input == "result")
     {
+
+trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
         return result;
     }
-    else if (input == "mem")
+
+    else
+    if (input == "mem")
     {
+
+trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
         return mem;
     }
+
     else
     {
-        return std::stod(input);
+
+trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
+        return std :: stod (input);
     }
+
+trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
 }
-void Calculator::welcome() const
+void Calculator :: welcome () const
 {
-    std::cout << "\n\nEnter an operation (+, -, /, *, sqrt, square, change, setmem, printmem) or exit\n";
+trace_log_ptr->push_back(std::string("<Calculator::welcome() const@@@calculator.cpp>"));
+    std :: cout << "\n\nEnter an operation (+, -, /, *, sqrt, square, change, setmem, printmem) or exit\n";
+trace_log_ptr->push_back(std::string("</Calculator::welcome() const@@@calculator.cpp>"));
 }
-/// parse input and decide which member func to call
-void Calculator::parseOperation(const std::string& input)
+void Calculator :: parseOperation (const std :: string & input)
 {
+trace_log_ptr->push_back(std::string("<Calculator::parseOperation(const std :: string & input)@@@calculator.cpp>"));
     if (input == "+" || input == "add" || input == "addition" || input == "sum")
     {
-        add();
+        add ();
     }
-    else if (input == "-" || input == "sub" || input == "subtraction" || input == "minus")
+
+    else
+    if (input == "-" || input == "sub" || input == "subtraction" || input == "minus")
     {
-        subtract();
+        subtract ();
     }
-    else if (input == "/" || input == "divide" || input == "div")
+
+    else
+    if (input == "/" || input == "divide" || input == "div")
     {
-        divide();
+        divide ();
     }
-    else if (input == "*" || input == "mul" || input == "multiply" || input == "times")
+
+    else
+    if (input == "*" || input == "mul" || input == "multiply" || input == "times")
     {
-        multiply();
+        multiply ();
     }
-    else if (input == "sqrt")
+
+    else
+    if (input == "sqrt")
     {
-        sqrt();
+        sqrt ();
     }
-    else if (input == "square")
+
+    else
+    if (input == "square")
     {
-        square();
+        square ();
     }
-    else if (input == "setmem")
+
+    else
+    if (input == "setmem")
     {
-        setMem();
+        setMem ();
     }
-    else if (input == "printmem")
+
+    else
+    if (input == "printmem")
     {
-        printMem();
+        printMem ();
     }
+
+trace_log_ptr->push_back(std::string("</Calculator::parseOperation(const std :: string & input)@@@calculator.cpp>"));
 }

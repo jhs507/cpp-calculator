@@ -5,6 +5,12 @@
 #include <array>
 #include <cmath>
 
+#include <vector>
+
+extern std::vector<std::string>* trace_log_ptr;
+
+//#include "log_global.h"
+
 class Calculator
 {
 public:

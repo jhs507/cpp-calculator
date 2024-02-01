@@ -1,7 +1,7 @@
 #ifndef SCIENTIFIC_H
 #define SCIENTIFIC_H
 
-
+#include <vector>
 #include <string>
 #include <array>
 #include <cmath>

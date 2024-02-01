@@ -1,110 +1,135 @@
 #include <iostream>
 #include "scientific.h"
 
-/// Constructor
-Scientific::Scientific() : Calculator() {}
-
-/// Overrided welcome message to show scientific options
-void Scientific::welcome() const
+Scientific :: Scientific (): Calculator ()
 {
-    std::cout << "\n\nEnter one of:\n"
-    << "+, -, /, *, sqrt, square, change, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n"
-    << "or exit\n";
+trace_log_ptr->push_back(std::string("<Scientific::Scientific(): Calculator ()@@@scientific.cpp>"));
+trace_log_ptr->push_back(std::string("</Scientific::Scientific(): Calculator ()@@@scientific.cpp>"));
 }
-
-/// Overridded parse operation to call correct member function
-void Scientific::parseOperation(const std::string& input)
+void Scientific :: welcome () const
 {
-    /// Reuse code for all simple calc inputs
-    /// If no simple calc match found it will continue below
-    Calculator::parseOperation(input);
-
+trace_log_ptr->push_back(std::string("<Scientific::welcome() const@@@scientific.cpp>"));
+    std :: cout << "\n\nEnter one of:\n" << "+, -, /, *, sqrt, square, change, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n" << "or exit\n";
+trace_log_ptr->push_back(std::string("</Scientific::welcome() const@@@scientific.cpp>"));
+}
+void Scientific :: parseOperation (const std :: string & input)
+{
+trace_log_ptr->push_back(std::string("<Scientific::parseOperation(const std :: string & input)@@@scientific.cpp>"));
+    Calculator :: parseOperation (input);
     if (input == "sin")
     {
-        sin();
+        sin ();
     }
-    else if (input == "cos")
+
+    else
+    if (input == "cos")
     {
-        cos();
+        cos ();
     }
-    else if (input == "tan")
+
+    else
+    if (input == "tan")
     {
-        cos();
+        cos ();
     }
-    else if (input == "ln")
+
+    else
+    if (input == "ln")
     {
-        ln();
+        ln ();
     }
-    else if (input == "log")
+
+    else
+    if (input == "log")
     {
-        log();
+        log ();
     }
-    else if (input == "abs")
+
+    else
+    if (input == "abs")
     {
-        abs();
+        abs ();
     }
-    else if (input == "pow")
+
+    else
+    if (input == "pow")
     {
-        pow();
+        pow ();
     }
+
+trace_log_ptr->push_back(std::string("</Scientific::parseOperation(const std :: string & input)@@@scientific.cpp>"));
 }
-void Scientific::sin()
+void Scientific :: sin ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::sin(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::sin()@@@scientific.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: sin (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::sin()@@@scientific.cpp>"));
 }
-void Scientific::cos()
+void Scientific :: cos ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::cos(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::cos()@@@scientific.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: cos (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::cos()@@@scientific.cpp>"));
 }
-void Scientific::tan()
+void Scientific :: tan ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::tan(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::tan()@@@scientific.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: tan (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::tan()@@@scientific.cpp>"));
 }
-void Scientific::ln()
+void Scientific :: ln ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::log(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::ln()@@@scientific.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: log (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::ln()@@@scientific.cpp>"));
 }
-void Scientific::log()
+void Scientific :: log ()
 {
-    std::string a, b;
-    std::cout << "Enter the base: ";
-    std::cin >> a;
-    std::cout << "Enter a number: ";
-    std::cin >> b;
-    result = std::log(parseInput(b))/std::log(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::log()@@@scientific.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the base: ";
+    std :: cin >> a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> b;
+    result = std :: log (parseInput (b)) / std :: log (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::log()@@@scientific.cpp>"));
 }
-void Scientific::abs()
+void Scientific :: abs ()
 {
-    std::string a;
-    std::cout << "Enter a number: ";
-    std::cin >> a;
-    result = std::abs(parseInput(a));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::abs()@@@scientific.cpp>"));
+    std :: string a;
+    std :: cout << "Enter a number: ";
+    std :: cin >> a;
+    result = std :: abs (parseInput (a));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::abs()@@@scientific.cpp>"));
 }
-void Scientific::pow()
+void Scientific :: pow ()
 {
-    std::string a, b;
-    std::cout << "Enter the base: ";
-    std::cin >> a;
-    std::cout << "Enter the exponent: ";
-    std::cin >> b;
-    result = std::pow(parseInput(a), parseInput(b));
-    std::cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("<Scientific::pow()@@@scientific.cpp>"));
+    std :: string a, b;
+    std :: cout << "Enter the base: ";
+    std :: cin >> a;
+    std :: cout << "Enter the exponent: ";
+    std :: cin >> b;
+    result = std :: pow (parseInput (a), parseInput (b));
+    std :: cout << "The result is " << result;
+trace_log_ptr->push_back(std::string("</Scientific::pow()@@@scientific.cpp>"));
 }
