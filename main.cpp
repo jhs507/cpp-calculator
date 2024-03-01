@@ -5,13 +5,10 @@
 #include "scientific.h"
 using namespace std;
 
-
+std::vector<std::string>* trace_log_ptr = new std::vector<std::string>();
 
 int main ()
 {
-
-trace_log_ptr = new std::vector<std::string>();
-
 trace_log_ptr->push_back(std::string("<main()@@@main.cpp>"));
     Calculator calc;
     Scientific sci;

@@ -1,12 +1,12 @@
 #include <iostream>
 #include "calculator.h"
 
-Calculator :: Calculator (): result (0.0), mem (0.0)
+Calculator::Calculator (): result (0.0), mem (0.0)
 {
 trace_log_ptr->push_back(std::string("<Calculator::Calculator(): result (0.0), mem (0.0)@@@calculator.cpp>"));
 trace_log_ptr->push_back(std::string("</Calculator::Calculator(): result (0.0), mem (0.0)@@@calculator.cpp>"));
 }
-void Calculator :: add ()
+void Calculator::add ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::add()@@@calculator.cpp>"));
     std :: string a, b;
@@ -18,7 +18,7 @@ trace_log_ptr->push_back(std::string("<Calculator::add()@@@calculator.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::add()@@@calculator.cpp>"));
 }
-void Calculator :: subtract ()
+void Calculator::subtract ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::subtract()@@@calculator.cpp>"));
     std :: string a, b;
@@ -30,7 +30,7 @@ trace_log_ptr->push_back(std::string("<Calculator::subtract()@@@calculator.cpp>"
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::subtract()@@@calculator.cpp>"));
 }
-void Calculator :: multiply ()
+void Calculator::multiply ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::multiply()@@@calculator.cpp>"));
     std :: string a, b;
@@ -42,7 +42,7 @@ trace_log_ptr->push_back(std::string("<Calculator::multiply()@@@calculator.cpp>"
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::multiply()@@@calculator.cpp>"));
 }
-void Calculator :: divide ()
+void Calculator::divide ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::divide()@@@calculator.cpp>"));
     std :: string a, b;
@@ -54,7 +54,7 @@ trace_log_ptr->push_back(std::string("<Calculator::divide()@@@calculator.cpp>"))
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::divide()@@@calculator.cpp>"));
 }
-void Calculator :: square ()
+void Calculator::square ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::square()@@@calculator.cpp>"));
     std :: string a;
@@ -65,7 +65,7 @@ trace_log_ptr->push_back(std::string("<Calculator::square()@@@calculator.cpp>"))
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::square()@@@calculator.cpp>"));
 }
-void Calculator :: sqrt ()
+void Calculator::sqrt ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::sqrt()@@@calculator.cpp>"));
     std :: string a;
@@ -75,7 +75,7 @@ trace_log_ptr->push_back(std::string("<Calculator::sqrt()@@@calculator.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Calculator::sqrt()@@@calculator.cpp>"));
 }
-void Calculator :: setMem ()
+void Calculator::setMem ()
 {
 trace_log_ptr->push_back(std::string("<Calculator::setMem()@@@calculator.cpp>"));
     std :: string a;
@@ -85,13 +85,13 @@ trace_log_ptr->push_back(std::string("<Calculator::setMem()@@@calculator.cpp>"))
     std :: cout << "The mem is " << mem;
 trace_log_ptr->push_back(std::string("</Calculator::setMem()@@@calculator.cpp>"));
 }
-void Calculator :: printMem () const
+void Calculator::printMem () const
 {
 trace_log_ptr->push_back(std::string("<Calculator::printMem() const@@@calculator.cpp>"));
     std :: cout << "The mem is " << mem;
 trace_log_ptr->push_back(std::string("</Calculator::printMem() const@@@calculator.cpp>"));
 }
-double Calculator :: parseInput (const std :: string & input) const
+double Calculator::parseInput (const std :: string & input) const
 {
 trace_log_ptr->push_back(std::string("<Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
     if (input == "result")
@@ -118,13 +118,13 @@ trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: stri
 
 trace_log_ptr->push_back(std::string("</Calculator::parseInput(const std :: string & input) const@@@calculator.cpp>"));
 }
-void Calculator :: welcome () const
+void Calculator::welcome () const
 {
 trace_log_ptr->push_back(std::string("<Calculator::welcome() const@@@calculator.cpp>"));
     std :: cout << "\n\nEnter an operation (+, -, /, *, sqrt, square, change, setmem, printmem) or exit\n";
 trace_log_ptr->push_back(std::string("</Calculator::welcome() const@@@calculator.cpp>"));
 }
-void Calculator :: parseOperation (const std :: string & input)
+void Calculator::parseOperation (const std :: string & input)
 {
 trace_log_ptr->push_back(std::string("<Calculator::parseOperation(const std :: string & input)@@@calculator.cpp>"));
     if (input == "+" || input == "add" || input == "addition" || input == "sum")

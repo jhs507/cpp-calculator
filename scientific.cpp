@@ -1,18 +1,18 @@
 #include <iostream>
 #include "scientific.h"
 
-Scientific :: Scientific (): Calculator ()
+Scientific::Scientific (): Calculator ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::Scientific(): Calculator ()@@@scientific.cpp>"));
 trace_log_ptr->push_back(std::string("</Scientific::Scientific(): Calculator ()@@@scientific.cpp>"));
 }
-void Scientific :: welcome () const
+void Scientific::welcome () const
 {
 trace_log_ptr->push_back(std::string("<Scientific::welcome() const@@@scientific.cpp>"));
     std :: cout << "\n\nEnter one of:\n" << "+, -, /, *, sqrt, square, change, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n" << "or exit\n";
 trace_log_ptr->push_back(std::string("</Scientific::welcome() const@@@scientific.cpp>"));
 }
-void Scientific :: parseOperation (const std :: string & input)
+void Scientific::parseOperation (const std :: string & input)
 {
 trace_log_ptr->push_back(std::string("<Scientific::parseOperation(const std :: string & input)@@@scientific.cpp>"));
     Calculator :: parseOperation (input);
@@ -59,7 +59,7 @@ trace_log_ptr->push_back(std::string("<Scientific::parseOperation(const std :: s
 
 trace_log_ptr->push_back(std::string("</Scientific::parseOperation(const std :: string & input)@@@scientific.cpp>"));
 }
-void Scientific :: sin ()
+void Scientific::sin ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::sin()@@@scientific.cpp>"));
     std :: string a;
@@ -69,7 +69,7 @@ trace_log_ptr->push_back(std::string("<Scientific::sin()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::sin()@@@scientific.cpp>"));
 }
-void Scientific :: cos ()
+void Scientific::cos ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::cos()@@@scientific.cpp>"));
     std :: string a;
@@ -79,7 +79,7 @@ trace_log_ptr->push_back(std::string("<Scientific::cos()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::cos()@@@scientific.cpp>"));
 }
-void Scientific :: tan ()
+void Scientific::tan ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::tan()@@@scientific.cpp>"));
     std :: string a;
@@ -89,7 +89,7 @@ trace_log_ptr->push_back(std::string("<Scientific::tan()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::tan()@@@scientific.cpp>"));
 }
-void Scientific :: ln ()
+void Scientific::ln ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::ln()@@@scientific.cpp>"));
     std :: string a;
@@ -99,7 +99,7 @@ trace_log_ptr->push_back(std::string("<Scientific::ln()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::ln()@@@scientific.cpp>"));
 }
-void Scientific :: log ()
+void Scientific::log ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::log()@@@scientific.cpp>"));
     std :: string a, b;
@@ -111,7 +111,7 @@ trace_log_ptr->push_back(std::string("<Scientific::log()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::log()@@@scientific.cpp>"));
 }
-void Scientific :: abs ()
+void Scientific::abs ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::abs()@@@scientific.cpp>"));
     std :: string a;
@@ -121,7 +121,7 @@ trace_log_ptr->push_back(std::string("<Scientific::abs()@@@scientific.cpp>"));
     std :: cout << "The result is " << result;
 trace_log_ptr->push_back(std::string("</Scientific::abs()@@@scientific.cpp>"));
 }
-void Scientific :: pow ()
+void Scientific::pow ()
 {
 trace_log_ptr->push_back(std::string("<Scientific::pow()@@@scientific.cpp>"));
     std :: string a, b;
